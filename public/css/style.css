@@ -133,13 +133,21 @@ body {
   text-align: left;
 }
 
-.vil-carousel .vil-carousel-categories {
+.vil-carousel .vil-carousel-categories,
+.vil-post .vil-post-item-categories {
   display: inline-block;
   font-size: 0.75rem;
   color: #fff;
   background-color: #333333;
   padding: 0.42857em 0.71429em 0.28571em;
   margin: 0.42857em 0.21429em 1.25em 0;
+  transition: 0.4s;
+}
+
+.vil-carousel .vil-carousel-categories:hover,
+.vil-post .vil-post-item-categories:hover {
+  background-color: #01bea0;
+  cursor: pointer;
 }
 
 .vil-carousel .vil-carousel-title {
@@ -151,21 +159,159 @@ body {
   margin: 1.57143em 0;
 }
 
-.vil-carousel .vil-carousel-price-currency {
+.vil-carousel .vil-carousel-price-currency,
+.vil-post-item .vil-post-item-price-currency {
   font-weight: 700;
 }
 
-.vil-carousel .vil-carousel-price-period {
+.vil-carousel .vil-carousel-price-period,
+.vil-post-item .vil-post-item-price-period {
   font-weight: 500;
   border-bottom: 1px dashed;
   cursor: help;
 }
 
-.vil-carousel .vil-carousel-button {
+.vil-carousel .vil-carousel-button,
+.vil-entry .vil-entry-button,
+.vil-post .vil-post-item-button {
   color: #fff;
   background-color: #01bea0;
   border: 1px solid #01bea0;
   text-transform: uppercase;
   padding: 12px 25px;
   margin: 1.5em 0 0;
+  transition: 0.4s;
+}
+
+.vil-carousel .vil-carousel-button:hover,
+.vil-entry .vil-entry-button:hover,
+.vil-post .vil-post-item-button:hover {
+  background-color: #333333;
+  border-color: #333333;
+}
+
+.vil-carousel .vil-carousel-button:focus,
+.vil-entry .vil-entry-button:focus,
+.vil-post .vil-post-item-button:focus {
+  outline: none;
+}
+
+/* Entry */
+.vil-entry {
+  width: 65%;
+  margin: auto;
+}
+
+.vil-entry .vil-entry-title {
+  color: #333;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  margin: 16.0001px 0px 40px;
+}
+
+.vil-entry .vil-entry-description {
+  text-align: center;
+  margin: 0px 0px 23.2px;
+}
+
+.vil-entry .vil-entry-content {
+  margin: 5.125em 0 5em;
+}
+
+.vil-entry .vil-entry-search {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vil-entry .vil-entry-search label {
+  color: #666;
+  margin: 0px 0px 9px;
+}
+
+.vil-entry .vil-entry-search label span {
+  text-decoration: underline;
+}
+
+.vil-entry .vil-entry-search .form-control {
+  height: 48px;
+  border-radius: 0;
+  border-color: #e0e1e5;
+  padding: 12px 43.2px 14px 20px;
+  background-position: right 17px top 16px;
+  background-size: 16px;
+  background-repeat: no-repeat;
+}
+
+.vil-entry .vil-entry-search .form-control:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Post */
+.vil-post .vil-post-item-content {
+  padding: 20px 50px;
+}
+
+.vil-post .vil-post-item-image {
+  position: relative;
+  height: 280px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.vil-post .vil-post-item-categories {
+  position: absolute;
+  left: 30px;
+  bottom: 5px;
+}
+
+.vil-post .vil-post-item-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 22px 0px;
+}
+
+.vil-post .vil-post-item-description {
+  margin: 0px 0px 23.2px;
+}
+
+.vil-post-item-attributes {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+  border-top: 1px solid #e0e1e5;
+  border-bottom: 1px solid #e0e1e5;
+  padding: 12px 0;
+  margin: 1.5em 0 1.25em;
+}
+
+.vil-post-item-attributes i.fa {
+  color: #333;
+}
+
+.vil-post-item-facilities,
+.vil-post-item-facilities a {
+  color: #666;
+  font-size: 13px;
+  transition: 0.4s;
+}
+
+.vil-post-item-facilities a:hover {
+  color: #01bea0;
+  text-decoration: none;
+}
+
+.vil-post-item .vil-post-item-price {
+  margin: 15px 0;
+}
+
+.vil-post-item .vil-post-item-details {
+  border-color: #333333;
+  border-style: solid solid dotted;
+  border-width: 0;
+  border-bottom-width: 1px;
+  color: #333333;
+  font-size: 14px;
 }
