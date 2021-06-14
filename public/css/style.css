@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ececec;
+  font-family: "Lato", sans-serif;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.vil-container {
+  background-color: #fff;
+  box-shadow: 0 2px 8px 0 rgb(51 51 51 / 20%);
+}
+
+/* NavBar */
+.vil-navbar {
+  padding: 0.8rem 2.5rem !important;
+}
+
+.vil-navbar .navbar-brand {
+  font-size: 1.45rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.vil-navbar .nav-item {
+  margin: 0 4px;
+  transition: 0.4s;
+}
+
+.vil-navbar .nav-item .nav-link {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.9) !important;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.vil-navbar .nav-item:hover .nav-link {
+  color: #01bea0 !important;
+}
+
+.vil-navbar .nav-item.active .nav-link {
+  color: #01bea0 !important;
+}
+
+.vil-navbar-social {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.vil-navbar-social li {
+  margin: 0px 15px;
+}
+
+.vil-navbar-social li:hover i.fa,
+.vil-navbar-search:hover i.fa {
+  color: #01bea0;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+/* Carousel */
+.vil-carousel {
+  height: 620px;
+}
+
+.vil-carousel .carousel-indicators {
+  right: auto;
+  bottom: 1.2rem;
+  margin-left: 2.5rem;
+}
+
+.vil-carousel .carousel-indicators li {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  text-indent: 0px;
+  color: #fff;
+  background-color: #fff0;
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.vil-carousel .carousel-indicators li:after {
+  content: "";
+  display: none;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  margin: 0px 10px;
+  transition: 0.4s;
+}
+
+.vil-carousel .carousel-indicators li.active {
+  width: 70px;
+}
+
+.vil-carousel .carousel-indicators li.active::after {
+  display: block;
+}
+
+.vil-carousel .carousel-item {
+  height: 620px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.vil-carousel .carousel-item:after {
+  content: "";
+  background-color: rgba(51, 51, 51, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.vil-carousel .carousel-caption {
+  left: 0;
+  bottom: 5rem;
+  margin-left: 2.5rem;
+  text-align: left;
+}
+
+.vil-carousel .vil-carousel-categories {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #fff;
+  background-color: #333333;
+  padding: 0.42857em 0.71429em 0.28571em;
+  margin: 0.42857em 0.21429em 1.25em 0;
+}
+
+.vil-carousel .vil-carousel-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.vil-carousel .vil-carousel-description {
+  margin: 1.57143em 0;
+}
+
+.vil-carousel .vil-carousel-price-currency {
+  font-weight: 700;
+}
+
+.vil-carousel .vil-carousel-price-period {
+  font-weight: 500;
+  border-bottom: 1px dashed;
+  cursor: help;
+}
+
+.vil-carousel .vil-carousel-button {
+  color: #fff;
+  background-color: #01bea0;
+  border: 1px solid #01bea0;
+  text-transform: uppercase;
+  padding: 12px 25px;
+  margin: 1.5em 0 0;
+}
