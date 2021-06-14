@@ -10,10 +10,9 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-  }
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .vil-container {
@@ -30,6 +29,25 @@ body {
   font-size: 1.45rem;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.vil-navbar .navbar-toggler {
+  color: #333333;
+  font-weight: 700;
+  transition: 0.4s;
+}
+
+.vil-navbar .navbar-toggler:hover {
+  color: #01bea0;
+}
+
+.vil-navbar .navbar-toggler:focus {
+  outline: 0;
+}
+
+.vil-navbar .navbar-toggler i.fa,
+.vil-navbar .navbar-toggler span {
+  font-size: 14px;
 }
 
 .vil-navbar .nav-item {
@@ -53,7 +71,11 @@ body {
   color: #01bea0 !important;
 }
 
-.vil-navbar-social {
+.vil-navbar .vil-navbar-menu {
+  display: flex;
+}
+
+.vil-navbar .vil-navbar-social {
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -61,15 +83,25 @@ body {
   margin-bottom: 0;
 }
 
-.vil-navbar-social li {
+.vil-navbar .vil-navbar-social li {
   margin: 0px 15px;
 }
 
-.vil-navbar-social li:hover i.fa,
-.vil-navbar-search:hover i.fa {
+.vil-navbar .vil-navbar-social li:hover i.fa,
+.vil-navbar .vil-navbar-search:hover i.fa {
   color: #01bea0;
   transition: 0.4s;
   cursor: pointer;
+}
+
+.vil-navbar .vil-navbar-social span {
+  display: none;
+}
+
+.vil-navbar .vil-navbar-search {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
 }
 
 /* Carousel */
@@ -129,7 +161,7 @@ body {
 .vil-carousel .carousel-caption {
   left: 0;
   bottom: 5rem;
-  margin-left: 2.5rem;
+  margin-left: 2.5em;
   text-align: left;
 }
 
@@ -151,12 +183,12 @@ body {
 }
 
 .vil-carousel .vil-carousel-title {
-  font-size: 1.875rem;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 
 .vil-carousel .vil-carousel-description {
-  margin: 1.57143em 0;
+  margin: 1.5em 0;
 }
 
 .vil-carousel .vil-carousel-price-currency,
@@ -198,7 +230,7 @@ body {
 
 /* Entry */
 .vil-entry {
-  width: 65%;
+  width: 70%;
   margin: auto;
 }
 
@@ -221,7 +253,13 @@ body {
 
 .vil-entry .vil-entry-search {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.vil-entry .vil-entry-search .form-group {
+  margin: 15px 10px;
 }
 
 .vil-entry .vil-entry-search label {
@@ -314,4 +352,115 @@ body {
   border-bottom-width: 1px;
   color: #333333;
   font-size: 14px;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-item.dropdown .dropdown-menu {
+  padding: 0;
+  border-radius: 0;
+  border: 1px solid #e0e1e5;
+}
+
+.nav-item.dropdown .dropdown-menu .dropdown-item {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 10px;
+  text-transform: uppercase;
+}
+
+.nav-item.dropdown .dropdown-menu .dropdown-item:hover,
+.nav-item.dropdown .dropdown-menu .dropdown-item:focus {
+  color: #01bea0 !important;
+  background-color: #fff;
+  border-left: 2px solid #01bea0;
+  transition: 0.2s;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .vil-carousel {
+    height: 500px;
+  }
+
+  .vil-carousel .carousel-item {
+    height: 500px;
+  }
+
+  .vil-navbar {
+    display: block;
+  }
+
+  .vil-navbar .navbar-brand {
+    width: 100%;
+    text-align: center;
+  }
+
+  .vil-navbar .vil-navbar-menu {
+    display: block;
+  }
+
+  .vil-navbar .navbar-nav .nav-item {
+    padding: 7px 0;
+    border-top: 1px solid #dee2e6 !important;
+  }
+
+  .vil-navbar .navbar-nav .dropdown-item {
+    text-indent: 20px;
+    padding: 8px 0;
+    border-top: 1px solid #dee2e6 !important;
+  }
+
+  .vil-navbar .navbar-nav .nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .vil-navbar .navbar-nav .dropdown-menu {
+    border: 0;
+  }
+
+  .vil-navbar .vil-navbar-social {
+    display: block;
+    padding-top: 20px;
+    border-top: 1px solid #dee2e6;
+  }
+
+  .vil-navbar .vil-navbar-social li {
+    margin: 0;
+    padding: 0.7em 0;
+  }
+
+  .vil-navbar .vil-navbar-social li i.fa {
+    width: 40px;
+    font-size: 20px;
+  }
+
+  .vil-navbar .vil-navbar-social span {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .vil-entry {
+    width: 90%;
+  }
+
+  .vil-entry .vil-entry-search {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .vil-navbar .vil-navbar-content {
+    border: 0 !important;
+  }
 }
