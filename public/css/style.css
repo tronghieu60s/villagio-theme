@@ -10,9 +10,13 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-  display: none;
+a {
+  color: #333;
+}
+
+a:hover {
+  color: #333;
+  text-decoration: none;
 }
 
 .vil-container {
@@ -102,6 +106,31 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   margin-left: 2rem;
+}
+
+.vil-navbar .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.vil-navbar .nav-item.dropdown .dropdown-menu {
+  padding: 0;
+  border-radius: 0;
+  border: 1px solid #e0e1e5;
+}
+
+.vil-navbar .nav-item.dropdown .dropdown-menu .dropdown-item {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 10px;
+  text-transform: uppercase;
+}
+
+.vil-navbar .nav-item.dropdown .dropdown-menu .dropdown-item:hover,
+.vil-navbar .nav-item.dropdown .dropdown-menu .dropdown-item:focus {
+  color: #01bea0 !important;
+  background-color: #fff;
+  border-left: 2px solid #01bea0;
+  transition: 0.2s;
 }
 
 /* Carousel */
@@ -287,34 +316,45 @@ body::-webkit-scrollbar {
 }
 
 /* Post */
-.vil-post .vil-post-item-content {
-  padding: 20px 50px;
+
+.vil-post .col-lg-4 {
+  padding: 0 0.7px;
 }
 
-.vil-post .vil-post-item-image {
+.vil-post .vil-post-item {
+  margin-bottom: 50px;
+}
+
+.vil-post .vil-post-item .vil-post-item-content {
+  padding: 5px 30px;
+}
+
+.vil-post .vil-post-item .vil-post-item-image {
+  display: block;
   position: relative;
   height: 280px;
   background-size: cover;
   background-position: center center;
 }
 
-.vil-post .vil-post-item-categories {
+.vil-post .vil-post-item .vil-post-item-categories {
   position: absolute;
   left: 30px;
   bottom: 5px;
 }
 
-.vil-post .vil-post-item-title {
-  font-size: 22px;
+.vil-post .vil-post-item .vil-post-item-title {
+  display: block;
+  font-size: 20px;
   font-weight: 700;
   margin: 22px 0px;
 }
 
-.vil-post .vil-post-item-description {
+.vil-post .vil-post-item .vil-post-item-description {
   margin: 0px 0px 23.2px;
 }
 
-.vil-post-item-attributes {
+.vil-post .vil-post-item .vil-post-item-attributes {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
@@ -325,58 +365,35 @@ body::-webkit-scrollbar {
   margin: 1.5em 0 1.25em;
 }
 
-.vil-post-item-attributes i.fa {
-  color: #333;
+.vil-post .vil-post-item .vil-post-item-attributes i.fa {
+  color: #666;
+  margin-right: 15px;
 }
 
-.vil-post-item-facilities,
-.vil-post-item-facilities a {
+.vil-post .vil-post-item .vil-post-item-facilities,
+.vil-post .vil-post-item .vil-post-item-facilities a {
   color: #666;
   font-size: 13px;
   transition: 0.4s;
 }
 
-.vil-post-item-facilities a:hover {
+.vil-post .vil-post-item .vil-post-item-facilities a:hover {
   color: #01bea0;
   text-decoration: none;
 }
 
-.vil-post-item .vil-post-item-price {
+.vil-post .vil-post-item .vil-post-item-price {
   margin: 15px 0;
 }
 
-.vil-post-item .vil-post-item-details {
+.vil-post .vil-post-item .vil-post-item-details {
+  font-size: 14px;
+  color: #333333;
   border-color: #333333;
   border-style: solid solid dotted;
   border-width: 0;
   border-bottom-width: 1px;
-  color: #333333;
-  font-size: 14px;
-}
-
-.nav-item.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.nav-item.dropdown .dropdown-menu {
-  padding: 0;
-  border-radius: 0;
-  border: 1px solid #e0e1e5;
-}
-
-.nav-item.dropdown .dropdown-menu .dropdown-item {
-  font-size: 13px;
-  font-weight: 600;
-  padding: 7px 10px;
-  text-transform: uppercase;
-}
-
-.nav-item.dropdown .dropdown-menu .dropdown-item:hover,
-.nav-item.dropdown .dropdown-menu .dropdown-item:focus {
-  color: #01bea0 !important;
-  background-color: #fff;
-  border-left: 2px solid #01bea0;
-  transition: 0.2s;
+  margin-left: 25px;
 }
 
 /* Responsive */
@@ -456,6 +473,25 @@ body::-webkit-scrollbar {
 
   .vil-entry .vil-entry-search {
     display: block;
+  }
+
+  .vil-post .col-lg-4 {
+    padding: 0 45px;
+  }
+
+  .vil-post .vil-post-item .vil-post-item-content {
+    padding: 5px 0px;
+  }
+
+  .vil-post .vil-post-item .vil-post-item-attributes {
+    display: block;
+    padding: 0;
+    border-bottom-width: 0;
+  }
+
+  .vil-post .vil-post-item .vil-post-item-attributes li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e1e5;
   }
 }
 
