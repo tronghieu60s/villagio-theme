@@ -20,13 +20,16 @@ a:hover {
 }
 
 .vil-container {
+  width: 100%;
   background-color: #fff;
   box-shadow: 0 2px 8px 0 rgb(51 51 51 / 20%);
+  margin: auto;
+  overflow-x: hidden;
 }
 
 /* NavBar */
 .vil-navbar {
-  padding: 0.8rem 2.5rem !important;
+  padding: 0.8rem 1rem !important;
 }
 
 .vil-navbar .navbar-brand {
@@ -396,6 +399,47 @@ a:hover {
   margin-left: 25px;
 }
 
+/* Testimonial */
+
+.vil-testimonial {
+  max-width: 100%;
+  margin: auto;
+}
+
+.vil-testimonial .vil-testimonial-item {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.vil-testimonial .vil-testimonial-item-author {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.vil-testimonial .vil-testimonial-item-content:before {
+  content: "\201C";
+  display: block;
+  font-size: 50px;
+  font-size: 3.125rem;
+  line-height: 0.97;
+  color: #e0e1e5;
+  font-weight: 700;
+  margin-bottom: -0.26em;
+}
+
+.vil-testimonial .vil-testimonial-item-name {
+  font-size: 12px;
+  color: #01bea0;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.vil-testimonial .vil-testimonial-item-name:hover {
+  text-decoration: none;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
   .container {
@@ -476,7 +520,7 @@ a:hover {
   }
 
   .vil-post .col-lg-4 {
-    padding: 0 45px;
+    padding: 0 30px;
   }
 
   .vil-post .vil-post-item .vil-post-item-content {
@@ -492,6 +536,13 @@ a:hover {
   .vil-post .vil-post-item .vil-post-item-attributes li {
     padding: 10px 0;
     border-bottom: 1px solid #e0e1e5;
+  }
+}
+
+@media (max-width: 768px) {
+  .vil-testimonial .vil-testimonial-item {
+    display: block;
+    text-align: center;
   }
 }
 
