@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
+:root {
+  --color-text: #333;
+  --color-link: #01bea0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,25 +16,23 @@ body {
 }
 
 a {
-  color: #333;
+  color: var(--color-text);
 }
 
 a:hover {
-  color: #333;
+  color: var(--color-text);
   text-decoration: none;
 }
 
 .vil-container {
-  width: 100%;
   background-color: #fff;
   box-shadow: 0 2px 8px 0 rgb(51 51 51 / 20%);
-  margin: auto;
   overflow-x: hidden;
 }
 
 /* NavBar */
 .vil-navbar {
-  padding: 0.8rem 1rem !important;
+  padding: 0.8rem 2rem !important;
 }
 
 .vil-navbar .navbar-brand {
@@ -45,7 +48,7 @@ a:hover {
 }
 
 .vil-navbar .navbar-toggler:hover {
-  color: #01bea0;
+  color: var(--color-link);
 }
 
 .vil-navbar .navbar-toggler:focus {
@@ -71,11 +74,11 @@ a:hover {
 }
 
 .vil-navbar .nav-item:hover .nav-link {
-  color: #01bea0 !important;
+  color: var(--color-link) !important;
 }
 
 .vil-navbar .nav-item.active .nav-link {
-  color: #01bea0 !important;
+  color: var(--color-link) !important;
 }
 
 .vil-navbar .vil-navbar-menu {
@@ -96,7 +99,7 @@ a:hover {
 
 .vil-navbar .vil-navbar-social li:hover i.fa,
 .vil-navbar .vil-navbar-search:hover i.fa {
-  color: #01bea0;
+  color: var(--color-link);
   transition: 0.4s;
   cursor: pointer;
 }
@@ -130,9 +133,9 @@ a:hover {
 
 .vil-navbar .nav-item.dropdown .dropdown-menu .dropdown-item:hover,
 .vil-navbar .nav-item.dropdown .dropdown-menu .dropdown-item:focus {
-  color: #01bea0 !important;
+  color: var(--color-link) !important;
   background-color: #fff;
-  border-left: 2px solid #01bea0;
+  border-left: 2px solid var(--color-link);
   transition: 0.2s;
 }
 
@@ -210,7 +213,7 @@ a:hover {
 
 .vil-carousel .vil-carousel-categories:hover,
 .vil-post .vil-post-item-categories:hover {
-  background-color: #01bea0;
+  background-color: var(--color-link);
   cursor: pointer;
 }
 
@@ -239,8 +242,8 @@ a:hover {
 .vil-entry .vil-entry-button,
 .vil-post .vil-post-item-button {
   color: #fff;
-  background-color: #01bea0;
-  border: 1px solid #01bea0;
+  background-color: var(--color-link);
+  border: 1px solid var(--color-link);
   text-transform: uppercase;
   padding: 12px 25px;
   margin: 1.5em 0 0;
@@ -250,8 +253,8 @@ a:hover {
 .vil-carousel .vil-carousel-button:hover,
 .vil-entry .vil-entry-button:hover,
 .vil-post .vil-post-item-button:hover {
-  background-color: #333333;
-  border-color: #333333;
+  background-color: var(--color-text);
+  border-color: var(--color-text);
 }
 
 .vil-carousel .vil-carousel-button:focus,
@@ -267,7 +270,7 @@ a:hover {
 }
 
 .vil-entry .vil-entry-title {
-  color: #333;
+  color: var(--color-text);
   font-size: 34px;
   font-weight: 700;
   text-align: center;
@@ -361,7 +364,7 @@ a:hover {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-  color: #333;
+  color: var(--color-text);
   border-top: 1px solid #e0e1e5;
   border-bottom: 1px solid #e0e1e5;
   padding: 12px 0;
@@ -381,7 +384,7 @@ a:hover {
 }
 
 .vil-post .vil-post-item .vil-post-item-facilities a:hover {
-  color: #01bea0;
+  color: var(--color-link);
   text-decoration: none;
 }
 
@@ -431,13 +434,52 @@ a:hover {
 
 .vil-testimonial .vil-testimonial-item-name {
   font-size: 12px;
-  color: #01bea0;
+  color: var(--color-link);
   text-decoration: underline;
   text-transform: uppercase;
 }
 
 .vil-testimonial .vil-testimonial-item-name:hover {
   text-decoration: none;
+}
+
+/* Footer */
+.vil-footer {
+  font-size: 14px;
+}
+
+.vil-footer a:hover {
+  color: var(--color-link);
+  transition: 0.4s;
+}
+
+.vil-footer .vil-footer-top {
+  padding: 5rem;
+}
+
+.vil-footer .vil-footer-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.vil-footer .vil-footer-copyright {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.vil-footer .vil-footer-menu {
+  list-style-type: none;
+}
+
+.vil-footer .vil-footer-menu li {
+  margin-top: 1.5em;
+}
+
+.vil-footer .vil-footer-menu li a {
+  border-bottom: 1px dotted currentColor;
 }
 
 /* Responsive */
@@ -456,6 +498,7 @@ a:hover {
 
   .vil-navbar {
     display: block;
+    padding: 0.8rem 1rem !important;
   }
 
   .vil-navbar .navbar-brand {
@@ -537,6 +580,19 @@ a:hover {
     padding: 10px 0;
     border-bottom: 1px solid #e0e1e5;
   }
+
+  .vil-footer .vil-footer-top {
+    padding: 3rem 0;
+  }
+
+  .vil-footer .vil-footer-item {
+    margin: 2rem 0;
+  }
+
+  .vil-footer .vil-footer-copyright {
+    display: block;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -547,7 +603,16 @@ a:hover {
 }
 
 @media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
   .vil-navbar .vil-navbar-content {
     border: 0 !important;
+  }
+}
+
+@media (min-width: 1250px) {
+  .container {
+    max-width: 1200px;
   }
 }
